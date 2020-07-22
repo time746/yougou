@@ -1,0 +1,35 @@
+
+<!-- feedback tabbar -->
+<CustomTabBar tabs="{{tabs}}" bind:tabBarTap="handleTabBarTap"></CustomTabBar>
+
+<view class="feedback-main">
+  <view class="feedback-title">问题的种类</view>
+  <view class="feedback-category">
+    <view class="feedback-tag">功能建议</view>
+    <view class="feedback-tag">购买遇到问题</view>
+    <view class="feedback-tag">性能问题</view>
+    <view class="feedback-tag">其他</view>
+  </view>
+  <view class="feedback-content">
+    <textarea class="" value="" placeholder="请描述你您遇到的问题" 
+    value="{{textInfo}}" bind:input="handleTextInfoChange">
+      
+    </textarea>
+      
+    <view class="feedback-img">
+      <button bind:tap="handleChooseImgTap">+</button>
+      <block wx:for="{{imgPath}}" wx:key="*this">
+        <CustomUpImg imgPath="{{item}}" bind:handleIconTap="handleIconTap" data-index="{{index}}"></CustomUpImg>
+      </block>
+      
+    </view>
+  </view>
+  
+  <button size="default" type="warn" class="feedback-submit" bind:tap="handleSubmitTap">
+    <icon class="" type="success_no_circle" size="23" color="white">
+      
+    </icon>
+    <text>提交</text>
+        
+  </button>
+</view>

@@ -1,0 +1,137 @@
+page{
+  background-color: #eee;
+}
+//顶部头像
+.user-info-wrap {
+  height: 45vh;
+  background-color: var(--themeColor);
+  position: relative;
+  .user-info {
+    position: relative;
+    overflow: hidden;
+    height: 45vh;
+    .user-info-bg {
+      width: 102%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      vertical-align: middle;
+      filter: blur(10rpx);
+    }
+    .user-info-avatar {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30rpx;
+      color: #fff;
+      image {
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+        margin-bottom: 30rpx;
+      }
+    }
+  }
+  .user-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border: 2rpx solid;
+    font-size: 30rpx;
+    navigator {
+      padding: 15rpx 30rpx;
+    }
+
+  }
+}
+
+//user content
+.user-content {
+
+  //历史浏览
+  .history-info-wrap {
+    position: relative;
+    height: 50rpx;
+    .history-info {
+      position: absolute;
+      display: flex;
+      top: -50rpx;
+      left: 50%;
+      transform: translate(-50%);
+      width: 90%;
+      height: 90rpx;
+      background-color: #fff;
+
+      .history-info-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        :first-child {
+          color: var(--themeColor);
+        }
+      }
+    }
+  }
+  // 我的订单
+  .user-order-wrap {
+    .user-order-title {
+      line-height: 70rpx;
+      height: 70rpx;
+      padding-left: 20rpx;
+      background-color: #fff;
+    }
+    .user-order {
+      display: flex;
+      height: 90rpx;
+      background-color: #fff;
+      margin-bottom: 10rpx;
+      border-top: 2rpx solid #eee;
+      .user-order-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        :first-child {
+          color: var(--themeColor);
+        }
+      }
+    }
+  }
+  //收货地址
+  .user-address {
+    height: 70rpx;
+    line-height: 70rpx;
+    background-color: #fff;
+    padding-left: 20rpx;
+    margin-bottom: 10rpx;
+  }
+  // 服务
+  .user-service {
+    
+    background-color: #fff;
+    padding-left: 20rpx;
+    margin-bottom: 10rpx;
+
+    .user-service-item {
+      height: 70rpx;
+      line-height: 70rpx;
+      border-bottom: 2rpx solid #eee;
+    }
+  }
+  // 推荐
+  .user-recommend {
+    height: 70rpx;
+    line-height: 70rpx;
+    background-color: #fff;
+    padding-left: 20rpx;
+  }
+
+}

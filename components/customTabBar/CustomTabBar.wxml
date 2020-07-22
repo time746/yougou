@@ -1,0 +1,6 @@
+<view class="tab-bar" hover-class="none" hover-stop-propagation="false">
+  <view class="tab-bar-item {{item.isActive?'active':''}}" 
+  wx:for="{{tabs}}" wx:key="id" bind:tap="tabBarTap" data-index="{{index}}">
+    {{item.value}}
+  </view>
+</view>

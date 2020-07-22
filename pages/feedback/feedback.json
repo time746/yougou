@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "CustomTabBar": "../../components/customTabBar/CustomTabBar",
+    "CustomUpImg": "../../components/customUpImg/CustomUpImg"
+  },
+  "navigationBarTitleText": "意见反馈"
+}

@@ -1,0 +1,21 @@
+<!-- tabbar -->
+<CustomTabBar tabs="{{tabs}}" bind:tabBarTap="handleTabBarTap"></CustomTabBar>
+<!-- hot -->
+<view class="collect-title">
+  <text class="active">全部</text>
+  <text class="">正在热卖</text>
+  <text class="">即将上线</text>
+</view>
+
+<!-- 商品内容 -->
+<view class="collect-content">
+  <view class="goods-info" wx:for="{{collectList}}" wx:key="goods_id">
+    <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="img">
+      <image class="" src="{{item.goods_small_logo||'../../images/placeholder.png'}}" mode="widthFix"></image>
+    </navigator>
+    <view class="text">
+      <view class="brand">{{item.goods_name}}</view>
+      <view class="price">¥{{item.goods_price}}</view>
+    </view>
+  </view>
+</view>

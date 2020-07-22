@@ -1,0 +1,44 @@
+.swiper {
+  height: 340rpx;
+  image {
+    width: 100%;
+  }
+}
+
+.index-cate {
+  display: flex;
+  padding: 16rpx 0;
+  navigator {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    image {
+      width: 80%;
+      
+      
+    }
+  }
+}
+.index-products {
+  margin-top: 20rpx;
+  .product-title {
+
+  }
+  .product-image {
+    float: left;
+    width: 33.333vw;
+    //原图 232*386
+    // 282/386 = 33% / x
+    height: 33.333vw * 386 / 282;
+    padding: 5rpx;
+    &:nth-last-child(-n + 4) {
+      
+      height: 33.333vw * 386 / 282 / 2;
+    }
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}

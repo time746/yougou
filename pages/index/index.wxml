@@ -1,0 +1,37 @@
+<view>
+  <!-- 搜索框 -->
+  <SearchInput></SearchInput>
+  <!-- swiper -->
+  <swiper class="swiper" autoplay indicator-dots="{{true}}" circular="{{true}}">
+    <swiper-item wx:for="{{swiperList}}" wx:key="goods_id" class="swiper-item">
+      <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+        <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <!-- 导航 -->
+  <view class="index-cate">
+    <navigator wx:for="{{catesList}}" wx:key="name" open-type="switchTab" url="/pages/category/category">
+      <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+    </navigator>
+  </view>
+  <!-- 商品 -->
+  <view class="index-products">
+    <view wx:for="{{products}}" wx:for-item="item" wx:for-index="index" wx:key="id" class="">
+      <!-- 标题 -->
+      <view class="product-title">
+        <image class="" src="{{item.floor_title.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+      </view>
+      <!-- 具体商品 -->
+      <view class="clearfix">
+        <navigator wx:for="{{item.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name" class="product-image">
+          <image class="" src="{{item2.image_src}}" mode="scaleToFill"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="" hover-class="none" hover-stop-propagation="false">
+  {{filterQuery()}}
+</view>

@@ -1,0 +1,103 @@
+/* miniprogram/pages/pay/pay.wxss */
+page {
+  padding-bottom: 90rpx;
+}
+.shipping-address .address-non-existent {
+  padding: 20rpx;
+}
+.shipping-address .address-existent {
+  padding: 10rpx;
+  line-height: 40rpx;
+}
+.shipping-address .address-existent .name-tel {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-container .cart-title {
+  line-height: 80rpx;
+  height: 80rpx;
+  padding-left: 10rpx;
+  color: var(--themeColor);
+  font-size: 30rpx;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+.cart-container .cart-item {
+  display: flex;
+  border-bottom: 2rpx solid #ccc;
+}
+.cart-container .cart-item .item-check {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-container .cart-item .item-nav {
+  flex: 2;
+}
+.cart-container .cart-item .item-nav image {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.cart-container .cart-item .item-info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart-container .cart-item .item-info .info-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cart-container .cart-item .item-info .info-row {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-container .cart-item .item-info .info-row .info-price {
+  flex: 8;
+}
+.cart-container .cart-item .item-info .info-row .info-num {
+  flex: 2;
+  display: flex;
+  padding-right: 10rpx;
+}
+.cart-container .cart-item .item-info .info-row .info-num view {
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  vertical-align: middle;
+  border: 2rpx solid #ccc;
+}
+.cart-container .cart-item .item-info .info-row .info-num .num {
+  border: none;
+}
+.footer-tool {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+}
+.footer-tool .total-price-row {
+  flex: 4;
+  text-align: right;
+  padding: 4rpx 20rpx 0 0;
+}
+.footer-tool .total-price-row .total-price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+.footer-tool .order-pay {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: var(--themeColor);
+  font-size: 36rpx;
+}

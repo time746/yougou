@@ -1,0 +1,58 @@
+<!-- 地址 -->
+<view class="shipping-address" hover-class="none" hover-stop-propagation="false">
+  <!-- 当不存在地址时显示 -->
+  <view class="address-non-existent" wx:if="{{address.whole === undefined}}">
+    <button class="default" size="default" type="primary" plain="true" bind:tap="handleAddressTap">
+      获取收货地址
+    </button>
+  </view>
+  <!-- 当存在地址时 -->
+  <view wx:else class="address-existent">
+    <view class="name-tel">
+      <view class="">收货人:{{address.userName}}</view>
+      <view class="">{{address.telNumber}}</view>
+    </view>
+    <view class="addr">{{address.whole}}</view>
+  </view>
+</view>
+
+<!-- 购物车 -->
+<view class="cart-container">
+  <!-- text -->
+  <view class="cart-title">购物车</view>
+  <!-- cartList info -->
+  <view class="cart-content">
+    <!-- item info -->
+    <view class="cart-item" wx:for="{{cartList}}" wx:key="cat_id">
+      <view class="item-check">
+      </view>
+      <view class="item-nav">
+        <image class="" src="{{item.goods_small_logo}}" mode="widthFix"></image>
+      </view>
+      <view class="item-info">
+        <view class="info-desc">{{item.goods_name}}</view>
+        <view class="info-row">
+          <view class="info-price">{{item.goods_price}}</view>
+          <view class="info-num">
+            <view class="num" >x{{item.num}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 底部工具栏 -->
+<view class="footer-tool">
+  <view class="total-price-row">
+    <view class="" hover-class="none" hover-stop-propagation="false">
+      <text class="">合计:</text>
+      <text class="total-price">¥{{totalPrice}}</text>
+        
+    </view>
+    <view class="">包含运费</view>
+  </view>
+  <view class="order-pay" bind:tap="handleOrderPay">
+    结算({{goodsCount}})
+  </view>
+</view>

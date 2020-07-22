@@ -1,0 +1,79 @@
+
+<!-- 顶部头像 -->
+<view class="user-info-wrap">
+  <view class="user-info" wx:if="{{userInfo.avatarUrl}}">
+    <image class="user-info-bg" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+    <view class="user-info-avatar">
+      <image class="" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+      <view class="">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="user-btn" wx:else>
+    <navigator url="/pages/login/login">
+      登入
+    </navigator>
+  </view>
+</view>
+
+<!-- user-content -->
+<view class="user-content">
+  <!-- 历史浏览 -->
+  <view class="history-info-wrap">
+    <view class="history-info">
+      <navigator class="history-info-item">
+        <view>0</view>
+        <view>收藏的店铺</view>
+      </navigator>
+      <navigator class="history-info-item" url="/pages/collect/collect">
+        <view>{{collectCount}}</view>
+        <view>收藏的商品</view>
+      </navigator>
+      <navigator class="history-info-item">
+        <view>0</view>
+        <view>关注的商品</view>
+      </navigator>
+      <navigator class="history-info-item">
+        <view class="item-num">0</view>
+        <view>我的足迹</view>
+      </navigator>
+    </view>
+    
+  </view>
+  <!-- 我的订单 -->
+  <view class="user-order-wrap">
+      <view class="user-order-title">我的订单</view>
+      <view class="user-order">
+        <navigator class="user-order-item" url="/pages/order/order?type=1">
+          <view class="iconfont icon-wendang"></view>
+          <view>全部订单</view>
+        </navigator>
+        <navigator class="user-order-item" url="/pages/order/order?type=2">
+          <view class="iconfont icon-fukuan"></view>
+          <view>待付款</view>
+        </navigator>
+        <navigator class="user-order-item" url="/pages/order/order?type=3">
+          <view class="iconfont icon-wuliu"></view>
+          <view>待收货</view>
+        </navigator>
+        <navigator class="user-order-item" url="/pages/order/order?type=4">
+          <view class="iconfont icon-qian4"></view>
+          <view>退款/退货</view>
+        </navigator>
+      </view>
+  </view>
+
+  <!-- 收货地址 -->
+  <view class="user-address">
+    收货地址管理
+  </view>
+  <!-- 服务 -->
+  <view class="user-service">
+    <view class="user-service-item">联系客服</view>
+    <navigator class="user-service-item" url="/pages/feedback/feedback">意见反馈</navigator>
+    <view class="user-service-item">关于我们</view>
+  </view>
+  <!-- 推荐 -->
+  <view class="user-recommend">
+    把应用推荐给其他人
+  </view>
+</view>

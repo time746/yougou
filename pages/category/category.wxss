@@ -1,0 +1,38 @@
+.category-container {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.category-container .category-left {
+  flex: 2;
+  background-color: #f3f3f3;
+}
+.category-container .category-left view {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  vertical-align: middle;
+}
+.category-container .category-right {
+  flex: 5;
+}
+.category-container .category-right .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  vertical-align: middle;
+}
+.category-container .category-right .brand {
+  display: flex;
+  flex-wrap: wrap;
+}
+.category-container .category-right .brand navigator {
+  width: 33.33%;
+  padding: 20rpx;
+  text-align: center;
+}
+.category-container .category-right .brand navigator image {
+  width: 100%;
+}
+.active {
+  color: var(--themeColor);
+}

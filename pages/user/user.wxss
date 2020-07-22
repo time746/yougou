@@ -1,0 +1,119 @@
+page {
+  background-color: #eee;
+}
+.user-info-wrap {
+  height: 45vh;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.user-info-wrap .user-info {
+  position: relative;
+  overflow: hidden;
+  height: 45vh;
+}
+.user-info-wrap .user-info .user-info-bg {
+  width: 102%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+  filter: blur(10rpx);
+}
+.user-info-wrap .user-info .user-info-avatar {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30rpx;
+  color: #fff;
+}
+.user-info-wrap .user-info .user-info-avatar image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-bottom: 30rpx;
+}
+.user-info-wrap .user-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  border: 2rpx solid;
+  font-size: 30rpx;
+}
+.user-info-wrap .user-btn navigator {
+  padding: 15rpx 30rpx;
+}
+.user-content .history-info-wrap {
+  position: relative;
+  height: 50rpx;
+}
+.user-content .history-info-wrap .history-info {
+  position: absolute;
+  display: flex;
+  top: -50rpx;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  height: 90rpx;
+  background-color: #fff;
+}
+.user-content .history-info-wrap .history-info .history-info-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-content .history-info-wrap .history-info .history-info-item :first-child {
+  color: var(--themeColor);
+}
+.user-content .user-order-wrap .user-order-title {
+  line-height: 70rpx;
+  height: 70rpx;
+  padding-left: 20rpx;
+  background-color: #fff;
+}
+.user-content .user-order-wrap .user-order {
+  display: flex;
+  height: 90rpx;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+  border-top: 2rpx solid #eee;
+}
+.user-content .user-order-wrap .user-order .user-order-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-content .user-order-wrap .user-order .user-order-item :first-child {
+  color: var(--themeColor);
+}
+.user-content .user-address {
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #fff;
+  padding-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+.user-content .user-service {
+  background-color: #fff;
+  padding-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+.user-content .user-service .user-service-item {
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.user-content .user-recommend {
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #fff;
+  padding-left: 20rpx;
+}

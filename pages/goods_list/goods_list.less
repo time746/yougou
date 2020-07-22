@@ -1,0 +1,29 @@
+.goods-info {
+  display: flex;
+  border-bottom: 2rpx solid #eee;
+  navigator {
+    flex: 3;
+    image {
+      width: 100%;
+    }
+  }
+  .text {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 20rpx 20rpx;
+
+    .brand {
+      overflow : hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    
+    .price {
+      color: var(--themeColor);
+    }
+  }
+}

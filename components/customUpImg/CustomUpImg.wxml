@@ -1,0 +1,10 @@
+<view class="up-img" bind:tap="handleIconTap">
+  <image class="" src="{{imgPath}}">
+    
+  </image>
+  <icon class="" type="clear" size="23" color="red" >
+    
+  </icon>
+    
+</view>
+

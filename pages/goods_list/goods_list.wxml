@@ -1,0 +1,29 @@
+<view>
+  <!-- 搜索 -->
+  <SearchInput></SearchInput>
+  <!-- tabbar -->
+  <CustomTabBar tabs="{{tabs}}" bind:tabBarTap="tabBarTap"></CustomTabBar>
+  <!-- 商品信息 -->
+  <!-- 当选中第一个tab时显示 -->
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="goods-info" wx:for="{{goodsList}}" wx:key="goods_id">
+      <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="img">
+        <image class="" src="{{item.goods_small_logo||'../../images/placeholder.png'}}" mode="widthFix">
+        </image>
+      </navigator>
+      <view class="text">
+        <view class="brand">{{item.goods_name}}</view>
+        <view class="price">¥{{item.goods_price}}</view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{tabs[1].isActive}}">
+    
+  </block>
+
+  <block wx:if="{{tabs[1].isActive}}">
+    
+  </block>
+
+</view>

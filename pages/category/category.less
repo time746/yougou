@@ -1,0 +1,43 @@
+.category-container {
+  height: ~'calc(100vh - 90rpx)';
+  display: flex;
+  .category-left {
+    flex: 2;
+    background-color: #f3f3f3;
+    view {
+      height: 80rpx;
+      line-height: 80rpx;
+      text-align: center;
+      vertical-align: middle;
+      
+    }
+  }
+  .category-right {
+    flex: 5;
+    .title {
+      height: 80rpx;
+      line-height: 80rpx;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .brand {
+      display: flex;
+      flex-wrap: wrap;
+
+      navigator {
+        width: 33.33%;
+        padding: 20rpx;
+        text-align: center;
+        image {
+          width: 100%;
+          
+        }
+      }
+    }
+  }
+  
+}
+
+.active {
+  color: var(--themeColor);
+}
